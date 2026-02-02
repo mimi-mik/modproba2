@@ -53,6 +53,7 @@ public class Mojpierwszymod
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.MILOSZANDRYT);
+            event.accept(Moditems.SUROWY_MILOSZANDRYT);
         }
     }
 

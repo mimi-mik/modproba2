@@ -13,6 +13,8 @@ public class Moditems {
 
     public static final RegistryObject<Item> MILOSZANDRYT = ITEMS.register("miloszandryt",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SUROWY_MILOSZANDRYT = ITEMS.register("surowy_miloszandryt",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
