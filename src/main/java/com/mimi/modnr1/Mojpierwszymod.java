@@ -1,5 +1,6 @@
 package com.mimi.modnr1;
 
+import com.mimi.modnr1.block.ModBlocks;
 import com.mimi.modnr1.item.Moditems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -36,6 +37,7 @@ public class Mojpierwszymod
         MinecraftForge.EVENT_BUS.register(this);
 
         Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -54,6 +56,9 @@ public class Mojpierwszymod
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.MILOSZANDRYT);
             event.accept(Moditems.SUROWY_MILOSZANDRYT);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BLOK_MILOSZANDRYTU);
         }
     }
 
